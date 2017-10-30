@@ -1,5 +1,6 @@
 package cz.muni.fi.pa165.currency;
 
+import javax.inject.Named;
 import java.math.BigDecimal;
 import java.util.Currency;
 
@@ -7,6 +8,7 @@ import java.util.Currency;
  *
  * @author Marketa
  */
+@Named
 public class ExchangeRateTableImpl implements ExchangeRateTable {
 
     @Override

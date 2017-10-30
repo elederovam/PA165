@@ -9,11 +9,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  *
  * @author Marketa Elederova
  */
-public class MainXml {
+public class MainAnnotations {
 
     public static void main(String args[]) {
 
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("Spring-AutoScan.xml");
         CurrencyConvertor currencyConvertor = (CurrencyConvertor)ctx.getBean("currencyConvertor");
         BigDecimal result = currencyConvertor.convert(Currency.getInstance("EUR"), Currency.getInstance("CZK"), BigDecimal.ONE);
         System.out.println(result);
