@@ -14,7 +14,7 @@ public class MainAnnotations {
     public static void main(String args[]) {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("Spring-AutoScan.xml");
-        CurrencyConvertor currencyConvertor = (CurrencyConvertor)context.getBean("currencyConvertor");
+        CurrencyConvertor currencyConvertor = (CurrencyConvertor)context.getBean(CurrencyConvertor.class);
         BigDecimal result = currencyConvertor.convert(Currency.getInstance("EUR"), Currency.getInstance("CZK"), BigDecimal.ONE);
         System.out.println(result);
     }
